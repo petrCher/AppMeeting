@@ -8,3 +8,5 @@ app.include_router(profile)
 
 if __name__ == "__main__":
     uvicorn.run(app)
+
+

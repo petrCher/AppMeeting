@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Знакомства ПУ ФФ</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 class="app-title">Profcomff.Friends</h1>
+    <p class="app-description">
+      Сервис по подбору <span>профсоюзного друга</span>
+    </p>
+    <button type="button" class="create-account">Создать анкету</button>
+
+    <form class="filters">
+      <h3>Я ищу:</h3>
+      <label for="min_age">от</label>
+      <input
+        inputmode="number"
+        name="min_age"
+        id="min_age"
+        min="18"
+        max="80"
+        value="18"
+      />
+      <label for="min_age">до</label>
+      <input
+        inputmode="number"
+        name="max_age"
+        min="18"
+        max="80"
+        value="24"
+        placeholder="80"
+      />
+      <label for="gender"> Пол </label>
+      <select name="gender" id="gender">
+        <option value="default">Не выбрано</option>
+        <option value="женский">Женский</option>
+        <option value="мужской" selected>Мужской</option>
+      </select>
+      <button type="submit">Найти</button>
+    </form>
+
+    <div class="profiles">
+      <div class="profile">
+        <h3>Иванов Иван</h3>
+        <h4>Мужчина, 30 лет</h4>
+        <p>Интересы: сноуборд, лыжи</p>
+      </div>
+      <div class="profile"> 
+        <h3>Иванов Иван</h3>
+        <h4>Мужчина, 30 лет</h4>
+        <p>Интересы: сноуборд, лыжи</p>
+      </div>
+      <div class="profile">
+        <h3>Иванов Иван</h3>
+        <h4>Мужчина, 30 лет</h4>
+        <p>Интересы: сноуборд, лыжи</p>
+      </div>
+      <div class="profile">
+        <h3>Иванов Иван</h3>
+        <h4>Мужчина, 30 лет</h4>
+        <p>Интересы: сноуборд, лыжи</p>
+      </div>
+    </div>
+
+    <dialog id="account-dialog">
+      <form class="flex-down">
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Возраст</label>
+          <input type="number" id="age" name="age" min="0" required />
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Пол</legend>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="gender" value="male" required />
+                М
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" required />
+                Ж
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label for="interests">Интересы</label>
+          <input type="text" id="interests" name="interests" required />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Описание</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="contacts">Контакты</label>
+          <input type="text" id="contacts" name="contacts" required />
+        </div>
+
+        <div class="button-group">
+          <button type="button" id="reg-cancel">Отменить</button>
+          <button type="submit" id="reg-submit">Создать</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="profile-dialog">
+      <button type="button" id="profile-close">x</button>
+      <div id="content">
+        <h3>Иванов Иван</h3>
+        <h4>Мужчина, 30 лет</h4>
+        <p>Интересы: сноуборд, лыжи</p>
+        <p>Увлекаюсь сноубордом</p>
+        <p>
+          Связаться со мной: <a href="https://t.me/darknesshaseyes">телеграм</a>
+        </p>
+      </div>
+      <div id="comments"></div>
+      <form class="flex-down" id="comment-form">
+        <input
+          type="text"
+          name="comment-author"
+          id="name"
+          placeholder="Ваше имя"
+        />
+        <textarea
+          name="comment-text"
+          placeholder="Скажите, что думаете!"
+        ></textarea>
+        <button type="submit" id="comment-submit">Отправить</button>
+      </form>
+    </dialog>
+
+    <script src="./main.js" type="module"></script>
+    <script src="../mock-fetch.js"></script>
+  </body>
+</html>

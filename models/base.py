@@ -3,6 +3,7 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.ext.declarative import declarative_base
 from settings import get_settings, Settings
 
+
 settings: Settings = get_settings()
 
 engine = create_engine("postgresql://postgres:Alpha2006@localhost:5432")

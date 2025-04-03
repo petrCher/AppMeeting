@@ -1,0 +1,183 @@
+/* Base Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: seashell;
+}
+
+/* Application Header */
+.app-title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+  border: #000 solid 6px;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+.app-description {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+}
+
+.app-description > span {
+  text-decoration: underline;
+}
+
+/* Form Elements */
+.create-account {
+  width: 400px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  background-color: orange;
+  border: none;
+  border-radius: 50px 50px 50px 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-direction: row;
+  width: min(50%, 600px);
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters h2 {
+  margin: 0;
+}
+
+.filters button {
+  background-color: red;
+}
+
+.filters button:hover {
+  background-color: blue;
+}
+
+.filters input {
+  border: none;
+  background-color: inherit;
+  text-align: center;
+  width: 2em;
+  border-bottom: #000 solid 2px;
+}
+
+/* Profiles Grid */
+.profiles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 50px;
+  margin-top: 2rem;
+  justify-items: center;
+  z-index: 2;
+}
+
+.profile {
+  width: max(20em, 10%);
+  cursor: pointer;
+}
+
+.profile * {
+  pointer-events: none;
+}
+
+.profiles :hover {
+  background-color: blue;
+}
+
+/* Dialog Styles */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#account-dialog {
+  padding: 2rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Form Layout */
+.flex-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-down label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Input Elements */
+input,
+textarea,
+fieldset {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#comment-form textarea {
+  width: 300px;
+  background-color: red;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Button Styles */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#profile-close {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  background-color: inherit;
+}
